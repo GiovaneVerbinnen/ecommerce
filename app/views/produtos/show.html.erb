@@ -1,13 +1,13 @@
 <div class="page-header">
   <%= link_to produtos_path, class: 'btn btn-default' do %>
     <span class="glyphicon glyphicon-list-alt"></span>
-    Back
+    Voltar
   <% end %>
   <%= link_to edit_produto_path(@produto), class: 'btn btn-primary' do %>
     <span class="glyphicon glyphicon-pencil"></span>
-    Edit
+    Editar
   <% end %>
-  <h1>Show produto</h1>
+  <h1>Mostrar produto</h1>
 </div>
 
 <dl class="dl-horizontal">
@@ -20,7 +20,10 @@
   <dt>Quantidade:</dt>
   <dd><%= @produto.quantidade %></dd>
 
+    <dt>Valor:</dt>
+  <dd><%= @produto.valor %></dd>
+
   <dt>Tipo produto:</dt>
-  <dd><%= @produto.tipo_produto %></dd>
+  <dd><%= @produto.tipo_produto.nome %></dd>
 
 </dl>
