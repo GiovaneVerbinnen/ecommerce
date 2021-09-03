@@ -1,0 +1,32 @@
+
+    <div class="row mx-auto">
+        <div class="text-center">
+            <div class="card" style="width:18rem;">
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <span style="display:block;">
+                            <img src="<%= @produto.imagem %>" width="100px" />
+                        </span>
+                        <%= @produto.nome.upcase %>
+                    </h3>
+                    <hr>
+                    <h5>R$ <%= @produto.valor %>
+                    </h5>
+                    <p class="card-text">
+                        <%= @produto.descricao.truncate(100) %>
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <% if existe_carrinho?(@produto.id) %>
+                    <a href="/produto/<%= @produto.id %>/remover" class="btn btn btn-danger float-right">
+                        Remover
+                    </a>
+                    <% else %>
+                    <a href="/produto/<%= @produto.id %>/adicionar" class="btn btn btn-success float-right">
+                        Adicionar
+                    </a>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>

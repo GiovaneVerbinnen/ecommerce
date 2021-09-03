@@ -1,0 +1,18 @@
+<div class="page-header">
+  <h1>Login</h1>
+</div>
+
+<div class="container" style="max-width:350px;">
+    <form method="POST" action="/login/autenticar" class="form-signin">
+        <label for="email" class="sr-only">Email</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="Email" required="" autofocus="">
+        <label for="senha" class="sr-only">Senha</label>
+        <input type="password" id="senha" name="senha" class="form-control" placeholder="Senha" required="">
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="1" name="lembrar"> Lembrar
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+      </form>
+</div>

@@ -1,0 +1,33 @@
+<div class="page-header">
+  <%= link_to new_administradore_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    Novo Administradore
+  <% end %>
+  <h1>Listando administradores</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Senha</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @administradores) do |administradore| %>
+            <td><%= administradore.nome %></td>
+            <td><%= administradore.email %></td>
+            <td><%= administradore.senha %></td>
+            <td><%= link_to 'Show', administradore %></td>
+        <td><%= link_to 'Edit', edit_administradore_path(administradore) %></td>
+        <td><%= link_to 'Destroy', administradore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
