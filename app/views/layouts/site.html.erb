@@ -81,18 +81,21 @@
           <li class="nav-item">
             <a class="nav-link" href="/carrinho">Carrinho (<%= quantidade_carrinho %>)</a>
           </li>
+         <% if cliente_logado? %> 
             <li class="nav-item">
               <a class="nav-link" href="/cliente/cadastrar">Perfil</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/cliente/sair">Sair</a>
             </li>
+         <% else %>
             <li class="nav-item">
               <a class="nav-link" href="/cliente/logar">Login</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/cliente/cadastrar">Cadastro</a>
             </li>
+          <% end %>
         </ul>
       </div>
     </div>

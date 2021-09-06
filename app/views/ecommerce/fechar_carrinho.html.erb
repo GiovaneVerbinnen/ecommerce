@@ -1,0 +1,20 @@
+<div class="mx-auto">
+
+  <div class="row">
+    <h1>Carrinho</h1>
+  </div>
+  <hr>
+
+    <ul class="list-group">
+      <% @produtos.each do |produto| %>
+        <li class="list-group-item">
+          <%= produto.nome %> - R$ <%= produto.valor %>
+        </li>
+      <% end %>
+    </ul>
+  <hr>
+  <h5>
+    Valor total: R$ <%= @produtos.sum(:valor).round(2) %>
+  </h5>
+    <a href="/conluir/" class="btn btn-block btn-primary my-2" >Finalizar</a>
+</div>

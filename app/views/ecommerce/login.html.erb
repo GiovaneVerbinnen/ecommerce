@@ -1,0 +1,24 @@
+<div class="row mx-auto">
+  <div class="page-header mb-4">
+    <h1>Login</h1>
+  </div>
+  
+  <div class="container d-block" style="max-width:400px;">
+      <form method="POST" action="/cliente/login" class="form-signin">
+          <label for="email" class="sr-only">Email</label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="Email" required="" autofocus="">
+          <label for="senha" class="sr-only">Senha</label>
+          <input type="password" id="senha" name="senha" class="form-control" placeholder="Senha" required="">
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="1" name="lembrar"> Lembrar
+            </label>
+          </div>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+        </form>
+  <div class="d-block my-4" style="max-width:400px;">
+  <h5>Cadastre-se</h5>
+  <a href="/cliente/cadastrar" class="btn btn-success">Cadatrar</a>
+</div>
+  </div>
+</div>
